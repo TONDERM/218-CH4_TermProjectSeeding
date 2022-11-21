@@ -1,0 +1,45 @@
+﻿@model IEnumerable<SCP_Foundation.Models.SCP>
+@{
+    ViewData["Title"] = "SCP Foundation";
+}
+
+<div class="text-center">
+    <h1 class="display-4" style="color:white; text-shadow: -1px 0 black, 0 1px black, 0 -1px black, 2px 2px 2px black;">Welcome to the Foundation</h1>
+</div>
+<div class="jumbotron img-fluid" style="background-color:black; border:solid 2px white">
+
+    <p>
+        <img src="~/Images/SCPmain_01.png" alt="AllMonsters" style="width:80%; border:white solid 1px;" class="rounded mx-auto d-block mt-3" />
+    </p>
+
+</div>
+<h2>SCP Database</h2>
+<a asp-controller="SCP" asp-action="Index" asp-route-id="SCPID">View</a>
+
+@*<a asp-controller="SCP" asp-action="Create">Create New SCP</a>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Id Number</th>
+            <th>Name</th>
+            <th>Object Class</th>
+            <th>Threat Level</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var sCP in Model)
+        {
+            <tr>
+                <td>@sCP.IdNumber</td>
+                <td>@sCP.Name</td>
+                <td>@sCP.ObjectClass</td>
+                <td>@sCP.ThreatLevel</td>
+                <td>
+                    <a asp-controller="SCP" asp-action="Edit" asp-route-id="@sCP.SCPID">Edit</a>
+                    <a asp-controller="SCP" asp-action="Delete" asp-route-id="@sCP.SCPID">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>*@
